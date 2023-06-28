@@ -33,7 +33,9 @@ namespace GraphQL20221004
             {
                 opt.UseSqlServer(Configuration.GetConnectionString("DbConnection"));
             });
-            services.AddGraphQLServer().AddQueryType<BlogQuery>();
+            services.AddGraphQLServer()
+                //.AddQueryType(q => q.Name("Query"))
+                .AddQueryType<BlogQuery>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

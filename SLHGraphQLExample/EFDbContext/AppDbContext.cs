@@ -1,4 +1,5 @@
-﻿using GraphQL20221004.Models;
+﻿using GraphQL20221004.Features.Fruit;
+using GraphQL20221004.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.Extensions.Configuration;
@@ -13,5 +14,6 @@ namespace GraphQL20221004.EfDbContext
         }
 
         public DbSet<BlogModel> Blogs { get; set; }
+        public DbSet<FruitModel> Fruits { get; set; }
     }
 }
